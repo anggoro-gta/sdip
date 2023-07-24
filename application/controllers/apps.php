@@ -13,7 +13,7 @@
     public function index()
     {
         $data['scripts'] = array( "assets/smc/plugins/chartjs/Chart.min.js", "assets/smc/plugins/mixitup/mixitup.min.js", "assets/smc/plugins/slimScroll/jquery.slimscroll.min.js", "assets/smc/js/treeTable.js", "assets/smc/js/dashboard.js" );
-        $data['scripts_post'] = array( "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0xRNnRByY45XTL3vL0M34ywwn5L2eF2k&callback=initMap" );
+        $data['scripts_post'] = array( "https://maps.googleapis.com/maps/api/js?key=AIzaSyALcj9sgW4DClNXnTDHvBzPxSImtJQixTM&callback=initMap" );
         $data['unit'] =  $this->conf->get_unit(null, null, null, "Kabupaten Kediri");
         $data["unsur_profil"] =  $this->conf->get_unsur_home();
         $data['post'] = '';

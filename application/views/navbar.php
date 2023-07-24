@@ -26,16 +26,16 @@
                 <li>
                     <a href="<?php echo BASE_URL() . 'survei'; ?>"><i class="fa fa-fw fa-edit"></i> Survei </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="<?php echo BASE_URL() . 'survei/rekap'; ?>"><i class="fa fa-fw fa-pie-chart"></i>
                         Geospasial </a>
-                </li>
+                </li> -->
 
             </ul>
         </li>
-        <li>
+        <!-- <li>
             <a href="<?php echo BASE_URL() . 'rekap'; ?>"><i class="fa fa-fw fa-pie-chart"></i> Data Statistik </a>
-        </li>
+        </li> -->
         <li>
             <a href="<?php echo BASE_URL() . 'ntp'; ?>"><i class="fa fa-fw fa-cubes"></i> Data NTP </a>
         </li>

@@ -18,7 +18,7 @@
             "assets/smc/pagination.js",
             "assets/kediri/js/manage/manage_survei.js"
         );
-        $data['scripts_post'] = array("https://maps.googleapis.com/maps/api/js?key=AIzaSyD0xRNnRByY45XTL3vL0M34ywwn5L2eF2k&callback=initMap" );
+        $data['scripts_post'] = array("https://maps.googleapis.com/maps/api/js?key=AIzaSyALcj9sgW4DClNXnTDHvBzPxSImtJQixTM&callback=initMap" );
         $data['styles'] = array("assets/smc/select2/css/select2.min.css");
         $this->load->view('survei/survei.php', $data);
     }   
