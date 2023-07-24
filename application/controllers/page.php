@@ -116,7 +116,7 @@
         );
         $data['scripts_post'] = array(
             "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js",
-            "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0xRNnRByY45XTL3vL0M34ywwn5L2eF2k&callback=initMap"
+            "https://maps.googleapis.com/maps/api/js?key=AIzaSyALcj9sgW4DClNXnTDHvBzPxSImtJQixTM&callback=initMap"
         );
         $data['styles'] = array("assets/smc/select2/css/select2.min.css");
         $data['unsurs'] =  $this->m_survei->get_elemen_survei();
@@ -136,7 +136,7 @@
             "assets/smc/treeTable.js"
         );
         $data['scripts_post'] = array(
-            "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0xRNnRByY45XTL3vL0M34ywwn5L2eF2k&callback=initMap"
+            "https://maps.googleapis.com/maps/api/js?key=AIzaSyALcj9sgW4DClNXnTDHvBzPxSImtJQixTM&callback=initMap"
         );
 
         $this->load->view('landing/view-data-kemiskinan.php', $data);
