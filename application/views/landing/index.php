@@ -7,9 +7,9 @@ $this->load->view("landing/header");
 			<div class="col-sm-10">
 				<h4 class="margin-top-no margin-bottom-no line-height-btn">BAPPEDA Kab Kediri membangun Kediri melalui perencanaan dan pengendalian pembangunan yang berkualitas.</h4>
 			</div>
-			<div class="col-sm-2 text-right text-left-sm">
+			<!-- <div class="col-sm-2 text-right text-left-sm">
 				<a href="<?php echo BASE_URL() ?>page/statistik" class="btn btn-blue btn-icon-inverse">Data Statistik <span class="fa fa-chevron-right"></span></a>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>

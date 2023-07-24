@@ -187,9 +187,9 @@
 								Data Kediri
 							</div>
 							<div class="padding-top-md" style="padding:10px; background: rgba(255,255,255,0.6); margin-bottom: 10px;">Data Kediri menyajikan informasi secara spasial dari setiap elemen pemerintah di Kab. Kediri</div>
-							<div class="slider-caption-action padding-top-sm">
+							<!-- <div class="slider-caption-action padding-top-sm">
 								<a href="<?php echo BASE_URL() ?>page/umum" class="btn btn-blue btn-icon-inverse">Data Umum <span class="fa fa-chevron-right"></span></a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
