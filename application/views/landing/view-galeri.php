@@ -16,19 +16,19 @@
 									<div class="info-box-img text-center">
 										<img src="<?php echo $this->config->item('file_upload').$value->img_thumb; ?>" class="img img-responsive img-responsive-center" />
 									</div>
-									<div class="info-box-text">
+									<div class="">
 										<div class="title margin-bottom-md">
-											<div class="icon font-yellow"><span class="fa fa-check"></span></div>
+											<div class="icon font-yellow"><span class=""></span></div>
 											<h5 class="title-text"><?php echo $value->judul ?></h5>
 										</div>
-										<div class="text-showup">
+										<!-- <div class="text-showup">
 											<p>
 												<?php echo $value->keterangan ?>
 											</p>
 											<a href="#" class="info-box-link btnvideo" data-judul="<?php echo $value->judul ?>" 
 											data-narasi="<?php echo $value->keterangan ?>"
 											data-video="<?php echo $this->config->item('file_upload').$value->video_loc; ?>"	>lihat video <span class="fa fa-chevron-right font-yellow"></span></a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>

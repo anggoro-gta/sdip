@@ -110,7 +110,7 @@
 
 
 			   <a class="navbar-brand text-bold" href="<?php echo BASE_URL() ?>">
-			  	<img src="<?php echo BASE_URL() ?>assets/kediri/img/logo-datakedirilagi.png" class="img img-responsive">
+			  	<img src="<?php echo BASE_URL() ?>assets/kediri/img/logo-datakediri-y.png" class="img img-responsive">
 			  </a>
 
 			</div>
@@ -122,10 +122,10 @@
 			  <ul class="nav navbar-nav navbar-right">
 				<li  <?php if(isset($smenu) &&$smenu=='home') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>">Home</a></li>
 				<li  <?php if(isset($smenu) &&$smenu=='profil') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/profil">Profil</a></li>				
-		    	<li <?php if(isset($smenu) &&$smenu=='statistik') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/statistik">Data Statistik</a></li>
+		    	<!-- <li <?php if(isset($smenu) &&$smenu=='statistik') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/statistik">Data Statistik</a></li> -->
 				<li <?php if(isset($smenu) &&$smenu=='ntp') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/ntp">NTP</a></li>
 				<li <?php if(isset($smenu) &&$smenu=='survey') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/survei">Data Spasial</a></li>
-				<li <?php if(isset($smenu) &&$smenu=='kemiskinan') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/kemiskinan">Data Kemiskinan</a></li>
+				<!-- <li <?php if(isset($smenu) &&$smenu=='kemiskinan') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/kemiskinan">Data Kemiskinan</a></li> -->
 				<li  <?php if(isset($smenu) &&$smenu=='galeri') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/galeri">Galeri</a></li>
 				<li><a href="<?php echo BASE_URL() ?>auth">Login</a></li>
 			  </ul>
@@ -144,7 +144,7 @@
 						<div class="slider-caption-title text-uppercase font-ubuntu">Selamat Datang</div>
 						<div class="padding-top-md" style="padding:10px; background: rgba(255,255,255,0.8);margin-bottom: 10px;">Data Kediri merupakan sebuah komitmen bersama dari setiap elemen pemerintah di Kab. Kediri untuk dapat menyediakan data yang terpusat, update dan akurat.</div>
 						<div class="slider-caption-action padding-top-sm">
-							<a href="<?php echo BASE_URL() ?>page/statistik" class="btn btn-blue btn-icon-inverse">Data Statistik<span class="fa fa-chevron-right"></span></a>
+							<!-- <a href="<?php echo BASE_URL() ?>page/statistik" class="btn btn-blue btn-icon-inverse">Data Statistik<span class="fa fa-chevron-right"></span></a> -->
 							<a href="<?php echo BASE_URL() ?>page/kontak" class="btn btn-yellow">Hubungi Kami <span class="fa fa-chevron-right"></span></a>
 						</div>
 					</div>
