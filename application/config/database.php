@@ -49,10 +49,10 @@ $active_group = 'default';
 $active_record = TRUE;
 
 // if (defined('ENVIRONMENT') && ENVIRONMENT=='development'){
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'smc_kediri';
+$db['default']['hostname'] = '103.187.9.254';
+$db['default']['username'] = 'usersdip';
+$db['default']['password'] = 'Lv%l5b657';
+$db['default']['database'] = 'kenshin_sdip';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

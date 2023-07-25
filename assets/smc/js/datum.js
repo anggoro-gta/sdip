@@ -165,8 +165,9 @@ function findProfil(e, t) {
 }
 
 function initMenuTahun() {
+    thn = $("#tahun").val();
     var e = "";
-    for (i = 2017; i <= $("#tahun").val(); i++) $("#currentTahun").val() != i && (e += "<li><a href='#' onclick=\"change_tahun(this,'" + i + "')\" ><i class='fa fa-calendar'></i> " + i + "</a></li>");
+    for (i = 2022; i <= parseInt(thn)+1; i++) $("#currentTahun").val() != i && (e += "<li><a href='#' onclick=\"change_tahun(this,'" + i + "')\" ><i class='fa fa-calendar'></i> " + i + "</a></li>");
     $("#menuTahun").html(e)
 }
 
