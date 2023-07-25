@@ -84,10 +84,10 @@ function get_mark() {
                         url: base_url + "d/survei/get_info_kelompok/",  
                         type: "post",
                         dataType: 'json',
-                        data:$.param({
+                        data:{
                             id_survey: a.id_survey,
                             id_elemen: a.id_elemen
-                        }),
+                        },
                         success: function(d) {
                             e.infoWindow.setContent("<h4>" + d.info.header + "</h4><p>" + d.info.content + "<div style='text-align:right'></div></p>");                            
                         }  
