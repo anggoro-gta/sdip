@@ -131,6 +131,8 @@
                         <input type="text" name="lon" class="form-control" required="" />
                     </div>
                 </div>
+                <a class="btn btn-success btn-sm" id="my_location">Lokasi Saat ini</a>
+                <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
                 <div id="map" style="height: 300px;"></div>
             </div>
             <div class="form-group">

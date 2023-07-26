@@ -1,3 +1,4 @@
+var map;
 function initMap() {
     (map = new google.maps.Map(document.getElementById("map"), {
         center: {
@@ -12,10 +13,30 @@ function initMap() {
             lat: defaultPositionLat,
             lng: defaultPositionLon
         },
+        draggable: true,
         map: map,
         title: "Pilih Lokasi"
-    }), map.setCenter(new google.maps.LatLng(defaultPositionLat, defaultPositionLon))
+    }), map.setCenter(new google.maps.LatLng(defaultPositionLat, defaultPositionLon));
+    google.maps.event.addListener(marker, 'dragend', function(marker) {
+        placeMarkerAndPanTo(marker.latLng)
+      });
 }
+
+$("#my_location").click(function (){
+    if ("geolocation" in navigator){
+            navigator.geolocation.getCurrentPosition(function(position){
+                infoWindow = new google.maps.InfoWindow({map: map});
+                var pos = {lat: position.coords.latitude, lng: position.coords.longitude};
+                // infoWindow.setPosition(pos);
+                // infoWindow.setContent("Found your location <br />Lat : "+position.coords.latitude+" </br>Lang :"+ position.coords.longitude);
+                map.setCenter(new google.maps.LatLng(pos));
+                map.panTo(pos);
+                placeMarkerAndPanTo(pos);
+            });
+        }else{
+            console.log("Browser doesn't support geolocation!");
+    }
+});
 
 function placeMarkerAndPanTo(e) {
     marker.setPosition(e), map.panTo(e), $("#form_survei").find("[name='lat']").val(e.lat), $("#form_survei").find("[name='lon']").val(e.lng)
