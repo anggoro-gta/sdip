@@ -35,7 +35,7 @@
             $sql .= " and smc_rekap.id_unit in ($unit_group)";
         }
         if ($skpd_group!=null) {
-            $sql .= " and smc_rekap.id_skpd in ($skpd_group)";
+            // $sql .= " and smc_rekap.id_skpd in ($skpd_group)";
         }
         $result = $this->db->query($sql)->result();
         $jumlah = 0;
