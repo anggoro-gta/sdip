@@ -144,7 +144,7 @@
 						<div class="slider-caption-title text-uppercase font-ubuntu">Selamat Datang</div>
 						<div class="padding-top-md" style="padding:10px; background: rgba(255,255,255,0.8);margin-bottom: 10px;">Data Kediri merupakan sebuah komitmen bersama dari setiap elemen pemerintah di Kab. Kediri untuk dapat menyediakan data yang terpusat, update dan akurat.</div>
 						<div class="slider-caption-action padding-top-sm">
-							<a href="<?php echo BASE_URL() ?>page/statistik" class="btn btn-blue btn-icon-inverse">Data Statistik<span class="fa fa-chevron-right"></span></a>
+							<a href="<?php echo BASE_URL() ?>page/statistik" class="btn btn-blue btn-icon-inverse">Data Statistik <span class="fa fa-chevron-right"></span></a>
 							<a href="<?php echo BASE_URL() ?>page/kontak" class="btn btn-yellow">Hubungi Kami <span class="fa fa-chevron-right"></span></a>
 						</div>
 					</div>
@@ -199,7 +199,7 @@
 							<div class="slider-caption-title font-ubuntu">
 								Bupati Kediri
 							</div>
-							<div class="padding-top-md" style="padding:10px; background: rgba(255,255,255,0.6);margin-bottom: 10px;">Masyarakat dapat memperoleh informasi tentang pembangunan Kabupaten Kediri melalui Data Kediri Lagi</div>
+							<div class="padding-top-md" style="padding:10px; background: rgba(255,255,255,0.6);margin-bottom: 10px;">Masyarakat dapat memperoleh informasi tentang pembangunan Kabupaten Kediri melalui Data Kediri</div>
 						</div>
 					</div>
 				</div>

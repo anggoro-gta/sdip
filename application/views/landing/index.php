@@ -25,6 +25,7 @@ $this->load->view("landing/header");
 					<p style="line-height:26px">Perencanaan Pembangunan adalah upaya mewujudkan sebuah mimpi, Perencanaan yang baik adalah ketika mimpi tersebut bisa diwujudkan.<br>Setiap tahun pemerintah melakukan pendataan untuk mengetahui hasil pembangunan yang telah dicapai dan apa saja yang masih perlu diupayakan.
 						<br>Tanpa data yang baik, pembangunan dapat salah sasaran. Perencanaan pembangunan yang objektif adalah perencanaan yang berbasiskan pada sebuah data
 					</p>
+					<a href="<?php echo BASE_URL() ?>page/statistik" class="btn btn-blue btn-icon-inverse">Data Statistik <span class="fa fa-chevron-right"></span></a>
 				</div>
 				<div class="col-md-6">
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
