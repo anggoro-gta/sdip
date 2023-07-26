@@ -113,7 +113,13 @@
                 <label>No Telp</label>
                 <input type="text" class="form-control" name="telp" id="telp" />
             </div>
-            <div id="fields"></div>
+
+            <div class="form-group">
+                <div class="row" style="margin-bottom: 10px;">
+                    <div id="fields"></div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="row" style="margin-bottom: 10px;">
                     <div class="col-sm-6">

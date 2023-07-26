@@ -90,7 +90,7 @@ function buat_survei() {
     }))
 }
 
-function edit_survei(e, t) {x
+function edit_survei(e, t) {
     findFromTable(currentDataPage, t);
     open_edit_survei_form();
     $("#keterangan_elemen").val(currentSurvei.keterangan_elemen);
@@ -377,7 +377,8 @@ function template_survey_field(t){
     if (t.value){
         val = 'value="'+t.value+'"';
     }
-    var str = '<div class="form-group"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
+    // var str = '<div class="form-group"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
+    var str = '<div class="col-sm-6"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
     return str;
 }
 
@@ -388,4 +389,5 @@ function fill_survey_field_value(field_values){
         form_template += template_survey_field(t);                    
     }),
     $("#fields").append(form_template);
+    console.log(form_template);
 }
