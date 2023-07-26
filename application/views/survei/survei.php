@@ -85,10 +85,10 @@
                 <label>Desa</label>
                 <select class="form-control" name="id_desa" id="id_desa"></select>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>SKPD</label>
                 <select class="form-control" name="id_skpd" id="id_skpd"></select>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label>Elemen Survei</label>
                 <select class="form-control" name="id_elemen" id="id_elemen"></select>
@@ -114,11 +114,13 @@
                 <input type="text" class="form-control" name="telp" id="telp" />
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <div class="row" style="margin-bottom: 10px;">
-                    <div id="fields"></div>
+
                 </div>
-            </div>
+            </div> -->
+
+            <div id="fields"></div>
 
             <div class="form-group">
                 <div class="row" style="margin-bottom: 10px;">

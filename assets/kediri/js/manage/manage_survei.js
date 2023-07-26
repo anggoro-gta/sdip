@@ -398,8 +398,8 @@ function template_survey_field(t){
     if (t.value){
         val = 'value="'+t.value+'"';
     }
-    // var str = '<div class="form-group"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
-    var str = '<div class="col-sm-6"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
+    var str = '<div class="form-group"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
+    // var str = '<div class="col-sm-6"><label>'+t.nama_field+'</label><input type="text" class="form-control" name="'+t.key_field+'" id="'+t.key_field+'" required="" '+val+'/></div>'
     return str;
 }
 
