@@ -90,7 +90,7 @@
 							<li>
   								<span>
   									<span class="fa fa-envelope icon-header"></span>
-  									<span class="text-header">bappeda [at] kedirikab.go.id</span>
+  									<span class="text-header">bappeda@kedirikab.go.id</span>
   								</span>
   							</li>
   						</ul>

@@ -101,14 +101,14 @@
                 <label>Nama Surveyor</label>
                 <input type="text" class="form-control" name="nama_surveyor" id="nama_surveyor" required="" />
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Nama PPL</label>
                 <input type="text" class="form-control" name="nama_ppl" id="nama_ppl" required="" />
             </div>
             <div class="form-group">
                 <label>Nama Narasumber</label>
                 <input type="text" class="form-control" name="nama_narasumber" id="nama_narasumber" required="" />
-            </div>
+            </div> -->
             <div class="form-group">
                 <label>No Telp</label>
                 <input type="text" class="form-control" name="telp" id="telp" />

@@ -45,7 +45,7 @@ $this->load->view("landing/header");
 				<div class="text-justify margin-bottom-md" style="line-height:18pt">Silahkan menghubungi kami untuk mendapatkan informasi yang anda butuhkan.<br>
 					<b><i class="fa fa-map-marker fa-fw"></i> Alamat</b> Jalan Soekarno Hatta No. 01, Kediri<br>
 					<b><i class="fa fa-phone fa-fw"></i> Telp.</b> (0354) 689995, <b>Fax</b> (0354) 689995</br>
-					<b><i class="fa fa-envelope fa-fw"></i> Email</b> bappeda[at]kedirikab.go.id
+					<b><i class="fa fa-envelope fa-fw"></i> Email</b> bappeda@kedirikab.go.id
 				</div>
 			</div>
 			<div class="col-md-8">
