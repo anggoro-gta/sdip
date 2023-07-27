@@ -105,6 +105,29 @@
         $this->load->view('landing/view-data-ntp.php', $data);
     }
 
+	//menampilkan halaman tabulasi bidang UMKM
+    public function bidang()
+    {
+        $this->load->model('m_survei');
+
+        $data["smenu"] = 'bidang';
+        $data['styles'] = array(
+            "assets/smc/select2/css/select2.min.css"
+        );
+        $data['scripts'] = array(
+            "assets/smc/select2/js/select2.full.min.js",
+            "assets/kediri/js/bidangsurvey_home.js"
+        );
+
+        //get years survey UMKM
+        $data['survey_years'] = $this->m_survei->get_distinct_year_survey();
+        //count array years
+        $count_years = count($data['survey_years']);
+        $data['count_years'] = $count_years;
+
+        $this->load->view('landing/view-data-bidang.php', $data);
+    }
+	
     // menampilkan halaman survei
     public function survei()
     {

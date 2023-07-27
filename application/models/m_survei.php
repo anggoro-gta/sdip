@@ -239,4 +239,27 @@
         }
         return $this->db->query($sql)->row();
     }
+	
+	//mencari tahun distinct dari survey UMKM
+    public function get_distinct_year_survey()
+    {
+        $query = $this->db->query("select distinct year(tgl_survey) as tahun from smc_survey");
+        $row3 = $query->result_array();
+
+        return $row3;
+    }
+
+    //mencari rekap survey berdasarkan bidang survey UMKM
+    public function get_rekap_survey_bidang_umkm()
+    {
+        $query = $this->db->query("SELECT smc_survey.id_survey, smc_survey.id_unit, smc_survey.tgl_survey, YEAR(smc_survey.tgl_survey) as tahun_survey, smc_survey_field_value.id_survey_field,UPPER (smc_survey_field_value.value) as bidang
+        FROM smc_survey
+        LEFT JOIN smc_survey_field_value
+        ON smc_survey.id_survey = smc_survey_field_value.id_survey
+        WHERE smc_survey_field_value.id_field IN ('1.9.31','1.10.31','1.11.31','1.12.31','1.13.31','1.14.31','1.15.31')");
+
+        $result = $query->result_array();
+
+        return $result;
+    }
 }

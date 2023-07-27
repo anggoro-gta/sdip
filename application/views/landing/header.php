@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head itemscope itemtype="http://schema.org/WebPage">
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 	<title itemprop="name">Data Kediri</title>
 	<meta property="og:title" content="Data Kediri">
 
@@ -120,15 +120,19 @@
 			  	<li><a href="<?php echo BASE_URL() ?>page/kontak"><span class="fa fa-phone"></span></a></li>
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right">
-				<li  <?php if(isset($smenu) &&$smenu=='home') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>">Home</a></li>
-				<li  <?php if(isset($smenu) &&$smenu=='profil') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/profil">Profil</a></li>				
-		    	<li <?php if(isset($smenu) &&$smenu=='statistik') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/statistik">Data Statistik</a></li>
-				<!-- <li <?php if(isset($smenu) &&$smenu=='ntp') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/ntp">NTP</a></li> -->
-				<li <?php if(isset($smenu) &&$smenu=='survey') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/survei">Data Spasial</a></li>
-				<!-- <li <?php if(isset($smenu) &&$smenu=='kemiskinan') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/kemiskinan">Data Kemiskinan</a></li> -->
-				<li  <?php if(isset($smenu) &&$smenu=='galeri') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/galeri">Galeri</a></li>
-				<li><a href="<?php echo BASE_URL() ?>auth">Login</a></li>
-			  </ul>
+						<li <?php if (isset($smenu) && $smenu == 'home') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>">Home</a></li>
+						<li <?php if (isset($smenu) && $smenu == 'profil') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/profil">Profil</a></li>
+						<li <?php if (isset($smenu) && $smenu == 'statistik') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/statistik">Data Statistik</a></li>
+						<!-- <li <?php if (isset($smenu) && $smenu == 'ntp') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/ntp">NTP</a></li> -->
+
+						<!-- menu baru tabulasi bidang -->
+						<li <?php if (isset($smenu) && $smenu == 'bidang') echo 'class="active"'; ?>><a href="<?php echo BASE_URL()?>page/bidang">Tabulasi Bidang</a></li>
+
+						<li <?php if (isset($smenu) && $smenu == 'survey') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/survei">Data Spasial</a></li>
+						<!-- <li <?php if (isset($smenu) && $smenu == 'kemiskinan') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/kemiskinan">Data Kemiskinan</a></li> -->
+						<li <?php if (isset($smenu) && $smenu == 'galeri') echo 'class="active"'; ?>><a href="<?php echo BASE_URL() ?>page/galeri">Galeri</a></li>
+						<li><a href="<?php echo BASE_URL() ?>auth">Login</a></li>
+					</ul>
 			</div>
 		  </div>
 		</nav>

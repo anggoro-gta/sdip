@@ -17,4 +17,13 @@
         }
         return $this->db->query($sql)->result();
     }
+	
+	//mencari kecamatan hanya Kab. Kediri
+    public function get_unit_kec_kab()
+    {
+        $query = $this->db->query("SELECT id_unit,nama FROM smc_unit WHERE kategori = 'kecamatan' AND nama NOT IN ('Mojoroto','Kota','Pesantren')");
+        $result = $query->result_array();
+
+        return $result;
+    }
 }

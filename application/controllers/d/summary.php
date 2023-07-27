@@ -8,6 +8,8 @@
         $this->load->model('m_summary');  
         $this->load->model('m_cube');  
         $this->load->model('m_ntp');
+		$this->load->model('m_unit');
+        $this->load->model('m_survei');
     }
 
 //    public function create_summary_survei(){
@@ -231,5 +233,35 @@
         $result['data'] = $this->m_ntp->get_ntp_rekap($periode, $id_elemen);
 
         echo json_encode($result, JSON_PRETTY_PRINT);
+    }
+	
+	//untuk mendapatkan survey rekap summary
+    public function get_bidangsurvey_summary()
+    {
+        $periode = isset($_POST['periode']) ? $_POST['periode'] : null;
+        $bidangsurvey = isset($_POST['bidangsurvey']) ? $_POST['bidangsurvey'] : null;
+
+        $upper_bidangsurvey = strtoupper($bidangsurvey);
+
+        $get_unit_kecamatan = $this->m_unit->get_unit_kec_kab();
+        $count_get_unit_kecamatan = count($get_unit_kecamatan);
+        $get_survey_rekap = $this->m_survei->get_rekap_survey_bidang_umkm();
+        $count_get_survey_rekap = count($get_survey_rekap);
+
+        $data_array_resume = [];
+        for ($i = 0; $i < $count_get_unit_kecamatan; $i++) {
+            $data_array_resume[$i]['nomor'] = $i + 1;
+            $data_array_resume[$i]['kecamatan'] = $get_unit_kecamatan[$i]['nama'];
+            $data_array_resume[$i]['id_kecamatan'] = $get_unit_kecamatan[$i]['id_unit'];
+            $k = 0;
+            for ($j = 0; $j < $count_get_survey_rekap; $j++) {
+                if ($get_survey_rekap[$j]['tahun_survey'] == $periode && $get_survey_rekap[$j]['bidang'] == $upper_bidangsurvey  && $get_survey_rekap[$j]['id_unit'] == $get_unit_kecamatan[$i]['id_unit']) {
+                    $k += 1;
+                }
+            }
+            $data_array_resume[$i]['jumlah_umkm'] = $k;
+        }
+
+        echo json_encode($data_array_resume);
     }
 }
