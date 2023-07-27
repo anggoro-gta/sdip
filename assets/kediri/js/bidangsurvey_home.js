@@ -21,9 +21,3 @@ function getrekapbidang(){
         }
     });
 }
-// function templateDataTable(i, d) {
-//     var tgl_data = new Date(d.tgl_data);
-//     var ntp = parseFloat(d.nilai_ntp);
-//     const month = tgl_data.toLocaleString('id-ID', { month: 'long' });
-//     return "<tr><td>" + (i+1) + "</td><td>" + month + "</td><td>" + ntp.toFixed(2) + " %</td></tr>"
-// }

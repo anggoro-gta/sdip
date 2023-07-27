@@ -12,32 +12,34 @@
                 <div class="col-md-3">
                     <div class="block-flat">
                         <div class="content">
-                            <div class="form-group">
-                                <label>Periode</label>
-                                <select name="periode" class="form-control" id="periode">
+                            <form method="post" action="bidang_print" target="_blank">
+                                <div class="form-group">
+                                    <label>Periode</label>
+                                    <select name="periode" class="form-control" id="periode">
 
-                                    <?php for ($i = 0; $i < $count_years; $i++) { ?>
-                                        <option value="<?php echo $survey_years[$i]['tahun']; ?>" <?php echo $survey_years[$i]['tahun'] == date("Y") ? "selected" : ""; ?>>
-                                            <?php echo $survey_years[$i]['tahun']; ?>
-                                        </option>
-                                    <?php } ?>
+                                        <?php for ($i = 0; $i < $count_years; $i++) { ?>
+                                            <option value="<?php echo $survey_years[$i]['tahun']; ?>" <?php echo $survey_years[$i]['tahun'] == date("Y") ? "selected" : ""; ?>>
+                                                <?php echo $survey_years[$i]['tahun']; ?>
+                                            </option>
+                                        <?php } ?>
 
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="kelompok">Bidang</label>
-                                <select class="form-control" name="kelompok" id="unsur">
-                                    <option value="Kuliner" selected>Kuliner</option>
-                                    <option value="Fashion">Fashion</option>
-                                    <option value="Kerajinan">Kerajinan</option>
-                                    <option value="Agribisnis">Agribisnis</option>
-                                    <option value="Perdagangan Besar">Perdagangan Besar</option>
-                                    <option value="Jasa">Jasa</option>
-                                    <option value="Lainnya">Lainnya</option>
-                                </select>
-                            </div>
-                            <button class="btn btn-primary btn-block" onclick="getrekapbidang()"><i class="fa fa-search"></i> Tampilkan Hasil Rekap</button>
-                            <button class="btn btn-success btn-block" onclick="cetakexcel()"><i class="fa fa-file"></i> Cetak Rekap Excel</button>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="kelompok">Bidang</label>
+                                    <select class="form-control" name="kelompok" id="unsur">
+                                        <option value="Kuliner" selected>Kuliner</option>
+                                        <option value="Fashion">Fashion</option>
+                                        <option value="Kerajinan">Kerajinan</option>
+                                        <option value="Agribisnis">Agribisnis</option>
+                                        <option value="Perdagangan Besar">Perdagangan Besar</option>
+                                        <option value="Jasa">Jasa</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="btn btn-primary btn-block" onclick="getrekapbidang()"><i class="fa fa-search"></i> Tampilkan Hasil Rekap</div>
+                                <button type="submit" class="btn btn-success btn-block"><i class="fa fa-file"></i> Cetak Rekap Excel</button>
+                            </form>
                         </div>
                     </div>
                 </div>
