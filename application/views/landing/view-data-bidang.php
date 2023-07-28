@@ -39,6 +39,8 @@
                                     </select>
                                 </div>
                                 <div class="btn btn-primary btn-block" onclick="getrekapbidang()"><i class="fa fa-search"></i> Tampilkan Hasil Rekap</div>
+                                <div class="btn btn-warning btn-block" onclick="getswot()"><i class="fa fa-search"></i> Roadmap SWOT</div>
+                                <div class="btn btn-warning btn-block" onclick="getswotpermen()"><i class="fa fa-search"></i> Roadmap SWOT Permendagri 90</div>
                                 <button type="submit" class="btn btn-success btn-block"><i class="fa fa-file"></i> Cetak Rekap Excel</button>
                             </form>
                         </div>
