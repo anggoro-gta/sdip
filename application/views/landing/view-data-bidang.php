@@ -28,7 +28,8 @@
                                 <div class="form-group">
                                     <label for="kelompok">Bidang</label>
                                     <select class="form-control" name="kelompok" id="unsur">
-                                        <option value="Kuliner" selected>Kuliner</option>
+                                        <option value="All" selected>All</option>
+                                        <option value="Kuliner">Kuliner</option>
                                         <option value="Fashion">Fashion</option>
                                         <option value="Kerajinan">Kerajinan</option>
                                         <option value="Agribisnis">Agribisnis</option>

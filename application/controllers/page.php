@@ -148,17 +148,32 @@
         $count_get_survey_rekap = count($get_survey_rekap);
 
         $data_array_resume = [];
-        for ($i = 0; $i < $count_get_unit_kecamatan; $i++) {
-            $data_array_resume[$i]['nomor'] = $i + 1;
-            $data_array_resume[$i]['kecamatan'] = $get_unit_kecamatan[$i]['nama'];
-            $data_array_resume[$i]['id_kecamatan'] = $get_unit_kecamatan[$i]['id_unit'];
-            $k = 0;
-            for ($j = 0; $j < $count_get_survey_rekap; $j++) {
-                if ($get_survey_rekap[$j]['tahun_survey'] == $periode && $get_survey_rekap[$j]['bidang'] == $upper_bidangsurvey  && $get_survey_rekap[$j]['id_unit'] == $get_unit_kecamatan[$i]['id_unit']) {
-                    $k += 1;
+        if ($upper_bidangsurvey == 'ALL') {
+            for ($i = 0; $i < $count_get_unit_kecamatan; $i++) {
+                $data_array_resume[$i]['nomor'] = $i + 1;
+                $data_array_resume[$i]['kecamatan'] = $get_unit_kecamatan[$i]['nama'];
+                $data_array_resume[$i]['id_kecamatan'] = $get_unit_kecamatan[$i]['id_unit'];
+                $k = 0;
+                for ($j = 0; $j < $count_get_survey_rekap; $j++) {
+                    if ($get_survey_rekap[$j]['tahun_survey'] == $periode && $get_survey_rekap[$j]['id_unit'] == $get_unit_kecamatan[$i]['id_unit']) {
+                        $k += 1;
+                    }
                 }
+                $data_array_resume[$i]['jumlah_umkm'] = $k;
             }
-            $data_array_resume[$i]['jumlah_umkm'] = $k;
+        } else {
+            for ($i = 0; $i < $count_get_unit_kecamatan; $i++) {
+                $data_array_resume[$i]['nomor'] = $i + 1;
+                $data_array_resume[$i]['kecamatan'] = $get_unit_kecamatan[$i]['nama'];
+                $data_array_resume[$i]['id_kecamatan'] = $get_unit_kecamatan[$i]['id_unit'];
+                $k = 0;
+                for ($j = 0; $j < $count_get_survey_rekap; $j++) {
+                    if ($get_survey_rekap[$j]['tahun_survey'] == $periode && $get_survey_rekap[$j]['bidang'] == $upper_bidangsurvey  && $get_survey_rekap[$j]['id_unit'] == $get_unit_kecamatan[$i]['id_unit']) {
+                        $k += 1;
+                    }
+                }
+                $data_array_resume[$i]['jumlah_umkm'] = $k;
+            }
         }
 
         $data['judul_bidang'] = $bidangsurvey;
