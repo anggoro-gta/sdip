@@ -4,7 +4,7 @@
 {
     // mengambil list field dari tabel smc_field
     public function get_field_list($id_elemen_parent=null, $parent_keyfield=null, $visible=TRUE){
-        $sql = "SELECT * FROM `smc_field` WHERE visible=$visible";
+        $sql = "SELECT * FROM `smc_field` WHERE is_survei=$visible";
 
         if ($parent_keyfield != null){
             $sql .= " AND id_parent = (SELECT id_field FROM smc_field WHERE key_field='$parent_keyfield')";

@@ -33,15 +33,18 @@ class survei extends CI_Controller
         }
 
         $id_elemen = isset($_POST['id_elemen']) ? $_POST['id_elemen'] : null;
+        $id_skpd = isset($_POST['id_skpd']) ? $_POST['id_skpd'] : null;
+        $nama_ppl = isset($_POST['nama_ppl']) ? $_POST['nama_ppl'] : null;
+        $nama_narasumber = isset($_POST['nama_narasumber']) ? $_POST['nama_narasumber'] : null;
 
         $data = array(
             "id_unit" => $_POST['id_unit'],
             "id_elemen" => $_POST['id_elemen'],
-            "id_skpd" => $_POST['id_skpd'],
+            "id_skpd" => $id_skpd,
             "tgl_survey" => $_POST['tgl_survey'],
             "nama_surveyor" => $_POST['nama_surveyor'],
-            "nama_ppl" => $_POST['nama_ppl'],
-            "nama_narasumber" => $_POST['nama_narasumber'],
+            "nama_ppl" => $nama_ppl,
+            "nama_narasumber" => $nama_narasumber,
             "lat" => isset($_POST['lat']) ? $_POST['lat'] : "",
             "lon" => isset($_POST['lon']) ? $_POST['lon'] : "",
             "telp" => $_POST['telp'],
@@ -52,7 +55,8 @@ class survei extends CI_Controller
         );
 
         if (isset($_POST['id_desa'])) {
-            $data["id_desa"] = $_POST['id_desa'];
+            $idDesa = $_POST['id_desa'];
+            $data["id_desa"] = $idDesa;
         }
 
         $status = FALSE;
@@ -75,6 +79,18 @@ class survei extends CI_Controller
             // tambahkan data ke table survey
             $data["id_survey"] = $this->info->get_next_id("smc_survey", "id_survey");
             $status = $this->m_master->replace("smc_survey", $data);
+
+            $thn = explode('-',$_POST['tgl_survey']);
+            $thnya = $thn[0];
+
+            $queCek = $this->db->query("SELECT jumlah FROM smc_rekap WHERE id_unit='$idDesa' AND id_elemen='$id_elemen' AND periode='$thnya' ")->row();
+            if($queCek){
+                $jmlBru = $queCek->jumlah+1;
+                $this->db->query("UPDATE smc_rekap SET jumlah='$jmlBru' WHERE id_unit='$idDesa' AND id_elemen='$id_elemen' AND periode='$thnya'");
+            }else{
+                $jmlBru = 1;
+                $this->db->query("INSERT INTO smc_rekap (id_unit, id_elemen, periode, jumlah) VALUES ('$idDesa','$id_elemen','$thnya','$jmlBru') ");
+            }
 
             // tambahkan data ke table smc_survey_field_value
             $fields = Globalsdb::get_fields($id_elemen);
@@ -103,7 +119,24 @@ class survei extends CI_Controller
     }
 
     public function hapus_survei()
-    {
+    {   
+        $idSrvey = $_POST['id_survey'];
+        $cri = $this->db->query("SELECT id_desa,id_elemen,tgl_survey FROM smc_survey WHERE id_survey='$idSrvey' ")->row();
+        $idDesa = $cri->id_desa;
+        $id_elemen = $cri->id_elemen;
+        $thn = explode('-',$cri->tgl_survey);
+        $thnya = $thn[0];
+        
+        $queCek = $this->db->query("SELECT jumlah FROM smc_rekap WHERE id_unit='$idDesa' AND id_elemen='$id_elemen' AND periode='$thnya' ")->row();
+        if($queCek){
+            if($queCek->jumlah > 1){
+                $jmlBru = intval($queCek->jumlah)-1;
+                $this->db->query("UPDATE smc_rekap SET jumlah='$jmlBru' WHERE id_unit='$idDesa' AND id_elemen='$id_elemen' AND periode='$thnya'");
+            }else{
+                $this->db->query("DELETE FROM smc_rekap WHERE id_unit='$idDesa' AND id_elemen='$id_elemen' AND periode='$thnya'");
+            }
+        }
+
         $this->m_survei->hapus_survey($_POST['id_survey']);
         $this->m_survei->hapus_detail_survey(null, $_POST['id_survey']);
     }
