@@ -39,7 +39,7 @@ var web_url = '<?php echo $_SERVER['SERVER_NAME'] ?>'; //alert (web_base_url); <
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <div class="logo hidden-xs" style="background-color:#002e5b; padding:10px; text-align:center;">
-                    <img src="<?php echo BASE_URL() ?>assets/kediri/img/logo-datakediri-y.png" style="height:100%;">
+                    <img src="<?php echo BASE_URL() ?>assets/kediri/img/logo-datakediri-2.png" style="height:100%;">
                 </div>
                 <ul class="nav navbar-right top-nav">
                 <li class="visible-xs hidden-lg hidden-sm hidden-md">

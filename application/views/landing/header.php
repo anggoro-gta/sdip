@@ -118,7 +118,7 @@
 
 
 					<a class="navbar-brand text-bold" href="<?php echo BASE_URL() ?>">
-						<img src="<?php echo BASE_URL() ?>assets/kediri/img/logo-datakediri-y.png" class="img img-responsive">
+						<img src="<?php echo BASE_URL() ?>assets/kediri/img/logo-datakediri-2.png" class="img img-responsive">
 					</a>
 
 				</div>
